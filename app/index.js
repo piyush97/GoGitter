@@ -5,4 +5,8 @@ require("./index.css");
 // State
 // Lifecycle event
 // UI
-class App extends React.Component {}
+class App extends React.Component {
+  render() {
+    return <div>Hello World!</div>;
+  }
+}
