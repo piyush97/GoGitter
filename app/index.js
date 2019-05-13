@@ -4,5 +4,5 @@ require("./index.css");
 
 // State
 // Lifecycle event
-
+// UI
 class App extends React.Component {}
