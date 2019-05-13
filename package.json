@@ -6,6 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/piyush97/backagain.git"
