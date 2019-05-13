@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/piyush97/backagain/issues"
   },
-  "homepage": "https://github.com/piyush97/backagain#readme"
+  "homepage": "https://github.com/piyush97/backagain#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
