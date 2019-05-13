@@ -4,8 +4,7 @@
   "description": "react again",
   "main": "index.js",
   "scripts": {
-    "create": "webpack",
-    "build": "webpack --config prod.config.js"
+    "start": "webpack-dev-server"
   },
   "babel": {
     "presets": [
