@@ -11,3 +11,5 @@ class App extends React.Component {
     return <div>Hello World!</div>;
   }
 }
+// Component and where to render
+ReactDOM.render(<App />, document.getElementById("app"));
