@@ -1,0 +1,19 @@
+{
+  "name": "again",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyush97/backagain.git"
+  },
+  "author": "Piyush Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/piyush97/backagain/issues"
+  },
+  "homepage": "https://github.com/piyush97/backagain#readme"
+}
