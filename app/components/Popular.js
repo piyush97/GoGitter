@@ -19,10 +19,15 @@ export default class Popular extends Component {
     var languages = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];
     return (
       <ul className="languages">
-        <p>Selected Language: {this.state.selectLanguage}</p>
         {languages.map(function(lang) {
           return (
-            <li onClick={this.updateLanguage.bind(null, lang)} key={lang}>
+            <li
+              style={
+                lang === this.state.selectLanguage ? { color: "#d0021b" } : null
+              }
+              onClick={this.updateLanguage.bind(null, lang)}
+              key={lang}
+            >
               {lang}
             </li>
           );
