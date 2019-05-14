@@ -31,3 +31,20 @@ li {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.popular-rank {
+  font-size: 20px;
+}
+
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.popular-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.space-list-items {
+  margin-bottom: 7px;
+}
