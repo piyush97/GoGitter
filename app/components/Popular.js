@@ -4,35 +4,47 @@ export default class Popular extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectLanguage: "All"
+      selectedLanguage: "All"
     };
     this.updateLanguage = this.updateLanguage.bind(this);
   }
 
   updateLanguage(lang) {
     this.setState(function() {
-      return { selectLanguage: lang };
+      return { selectedLanguage: lang };
     });
   }
 
   render() {
-    var languages = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];
     return (
-      <ul className="languages">
-        {languages.map(function(lang) {
-          return (
-            <li
-              style={
-                lang === this.state.selectLanguage ? { color: "#d0021b" } : null
-              }
-              onClick={this.updateLanguage.bind(null, lang)}
-              key={lang}
-            >
-              {lang}
-            </li>
-          );
-        }, this)}
-      </ul>
+      <div>
+        <SelectLanguage
+          selectedLanguage={this.state.selectedLanguage}
+          onSelect={this.updateLanguage}
+        />
+      </div>
     );
   }
+}
+
+function SelectLanguage(props) {
+  var languages = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];
+
+  return (
+    <ul className="languages">
+      {languages.map(lang => {
+        return (
+          <li
+            style={
+              lang === props.selectedLanguage ? { color: "#d0021b" } : null
+            }
+            onClick={props.onSelect.bind(null, lang)}
+            key={lang}
+          >
+            {lang}
+          </li>
+        );
+      })}
+    </ul>
+  );
 }
