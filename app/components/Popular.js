@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import api from "../utils/api";
-
+import propTypes from "prop-types";
 export default class Popular extends Component {
   constructor(props) {
     super(props);
@@ -34,10 +34,30 @@ export default class Popular extends Component {
           onSelect={this.updateLanguage}
         />
         {JSON.stringify(this.state.repos, null, 2)}
+        <RepoGrid repos={this.state.repos} />
       </div>
     );
   }
 }
+
+function RepoGrid(props) {
+  return (
+    <ul className="popular-list">
+      {props.repos.map(function(repo, index) {
+        return (
+          <li key={repo.index} className="popular-item">
+            <div className="popular-rank">#{index + 1}</div>
+            <ul className="space-list-items" />
+          </li>
+        );
+      }, this)}
+    </ul>
+  );
+}
+
+RepoGrid.propTypes = {
+  repos: propTypes.array.isRequired
+};
 
 function SelectLanguage(props) {
   var languages = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];

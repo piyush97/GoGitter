@@ -25,3 +25,9 @@ li {
   font-weight: bold;
   cursor: pointer;
 }
+
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
