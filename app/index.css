@@ -7,3 +7,21 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.languages {
+  display: flex;
+  justify-content: center;
+}
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.languages li {
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
