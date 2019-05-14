@@ -33,6 +33,7 @@ export default class Popular extends Component {
           selectedLanguage={this.state.selectedLanguage}
           onSelect={this.updateLanguage}
         />
+        {JSON.stringify(this.state.repos, null, 2)}
       </div>
     );
   }
