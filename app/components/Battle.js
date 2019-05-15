@@ -20,7 +20,7 @@ class PlayerInput extends Component {
 
   render() {
     return (
-      <form className="column">
+      <form className="column" onSubmit={this.handleSubmit}>
         <label className="header" htmlFor="username">
           {this.props.label}
         </label>
