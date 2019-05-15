@@ -14,14 +14,20 @@ export default class App extends React.Component {
       <Router>
         <div className="container">
           <Nav />
-          <Route exact path="/" component={Home} />
-          <Route path="/popular" component={Popular} />
-          <Route path="/battle" component={Battle} />
-          <Route
-            render={function() {
-              return <p>404...</p>;
-            }}
-          />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/popular" component={Popular} />
+            <Route path="/battle" component={Battle} />
+            <Route
+              render={function() {
+                return (
+                  <center>
+                    <h1 className="lost">I think you're lost</h1>
+                  </center>
+                );
+              }}
+            />{" "}
+          </Switch>
         </div>
       </Router>
     );

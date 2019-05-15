@@ -92,3 +92,10 @@ a {
 .button:active {
   transform: translateY(1px);
 }
+
+.lost {
+  display: flex;
+  margin: 25% 50% 50%;
+  text-decoration-style: dashed;
+  color: #d0021b;
+}
