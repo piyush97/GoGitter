@@ -6,6 +6,7 @@ class PlayerInput extends Component {
     this.state = {
       username: ""
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
@@ -31,6 +32,13 @@ class PlayerInput extends Component {
           value={this.state.username}
           onChange={this.handleChange}
         />
+        <button
+          className="button"
+          type="submit"
+          disabled={!this.state.username}
+        >
+          Submit
+        </button>
       </form>
     );
   }
