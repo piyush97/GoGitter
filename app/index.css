@@ -90,7 +90,8 @@ a {
 }
 
 .button:active {
-  transform: translateY(1px);
+  transform: translateY(2px);
+  background: #646464;
 }
 
 .lost {
@@ -98,4 +99,9 @@ a {
   margin: 25% 50% 50%;
   text-decoration-style: dashed;
   color: #d0021b;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
 }
