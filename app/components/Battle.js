@@ -1,5 +1,16 @@
 import React, { Component } from "react";
+import propTypes from "prop-types";
+class PlayerInput extends Component {
+  render() {
+    return;
+  }
+}
 
+PlayerInput.propTypes = {
+  id: propTypes.string.isRequired,
+  label: propTypes.string.isRequired,
+  onSubmit: propTypes.func.isRequired
+};
 export default class Battle extends Component {
   constructor() {
     super(props);
