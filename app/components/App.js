@@ -13,8 +13,8 @@ export default class App extends React.Component {
       <Router>
         <div className="container">
           <Nav />
+          <Route exact path="/" component={Home} />
           <Route path="/popular" component={Popular} />
-          <Route path="/" component={Home} />
           <Route
             render={function() {
               return <p>404...</p>;
