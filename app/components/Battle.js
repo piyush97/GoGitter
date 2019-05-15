@@ -23,6 +23,15 @@ export default class Battle extends Component {
   }
 
   render() {
-    return <div>Battle </div>;
+    var playerOneName = this.state.playerOneName;
+    var playerTwoName = this.state.playerTwoName;
+    return (
+      <div>
+        <div className="row">
+          {!playerOneName && <PlayerInput />}
+          {!playerTwoName && <PlayerInput />}
+        </div>
+      </div>
+    );
   }
 }
