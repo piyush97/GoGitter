@@ -1,8 +1,38 @@
 import React, { Component } from "react";
 import propTypes from "prop-types";
 class PlayerInput extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: ""
+    };
+  }
+
+  handleChange(event) {
+    var value = event.target.value;
+    this.setState(function() {
+      return {
+        username: value
+      };
+    });
+  }
+
   render() {
-    return;
+    return (
+      <form className="column">
+        <label className="header" htmlFor="username">
+          {this.props.label}
+        </label>
+        <input
+          id="username"
+          placeholder="github username"
+          type="text"
+          autoComplete="off"
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
+      </form>
+    );
   }
 }
 
