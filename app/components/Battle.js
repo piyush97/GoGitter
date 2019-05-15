@@ -28,8 +28,20 @@ export default class Battle extends Component {
     return (
       <div>
         <div className="row">
-          {!playerOneName && <PlayerInput />}
-          {!playerTwoName && <PlayerInput />}
+          {!playerOneName && (
+            <PlayerInput
+              id="playerOne"
+              label="Player One"
+              onSubmit={this.handleSubmit}
+            />
+          )}
+          {!playerTwoName && (
+            <PlayerInput
+              id="playerTwo"
+              label="Player Two"
+              onSubmit={this.handleSubmit}
+            />
+          )}
         </div>
       </div>
     );
