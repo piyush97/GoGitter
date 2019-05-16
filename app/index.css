@@ -146,7 +146,7 @@ li {
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   right: 0;
   font-weight: bolder;
   bottom: 0;
