@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import queryString from "query-string";
 import api from "../utils/api";
 import { Link } from "react-router-dom";
+import PlayerPreview from "./PlayerPreview";
 
 function Profile(props) {
   var info = props.info;
 
   return (
-    <div>
+    <PlayerPreview username={info.login} avatar={info.avatar_url}>
+      {" "}
       <ul className="space-list-items">
         {info.name && <li>{info.name}</li>}
         {info.location && <li>{info.location}</li>}
@@ -22,7 +24,7 @@ function Profile(props) {
           </li>
         )}
       </ul>
-    </div>
+    </PlayerPreview>
   );
 }
 
