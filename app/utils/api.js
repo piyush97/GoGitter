@@ -33,6 +33,11 @@ function calculateScore(profile, repos) {
   return followers * 3 + totalStars;
 }
 
+function handleError(error) {
+  console.warn(error);
+  return null;
+}
+
 export default {
   battle: players => {},
 
