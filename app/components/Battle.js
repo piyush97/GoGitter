@@ -139,10 +139,10 @@ export default class Battle extends React.Component {
             />
           )}
 
-          {playerOneImage !== null && (
+          {playerTwoImage !== null && (
             <PlayerPreview
-              avatar={playerOneImage}
-              username={playerOneName}
+              avatar={playerTwoImage}
+              username={playerTwoName}
               onReset={this.handleReset}
               id="playerOne"
             />
