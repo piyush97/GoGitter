@@ -15,7 +15,21 @@ export default class Loading extends Component {
       text: props.text
     };
   }
-
+  componentDidMount() {
+    let stopper = this.props.text + "...";
+    this.interval = window.setInterval(
+      function() {
+        if (this.state.text === stopper) {
+          this.setState({ text: this.props.text });
+        } else {
+          this.setState(function(prevState) {
+            return { text: prevState.text + "." };
+          });
+        }
+      }.bind(this),
+      300
+    );
+  }
   render() {
     return <p style={styles.content}>{this.state.text}</p>;
   }
