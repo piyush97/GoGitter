@@ -85,6 +85,7 @@ class Results extends React.Component {
       }.bind(this)
     );
   }
+
   render() {
     var error = this.state.error;
     var winner = this.state.winner;
@@ -105,9 +106,18 @@ class Results extends React.Component {
     }
 
     return (
-      <div className="row">
-        <Player label="Winner" score={winner.score} profile={winner.profile} />
-        <Player label="Loser" score={loser.score} profile={loser.profile} />
+      <div>
+        <div className="row">
+          <Player
+            label="Winner"
+            score={winner.score}
+            profile={winner.profile}
+          />
+          <Player label="Loser" score={loser.score} profile={loser.profile} />
+        </div>
+        <Link to="/battle">
+          <button className="button"> Again🔥</button>
+        </Link>
       </div>
     );
   }
