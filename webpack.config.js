@@ -1,7 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
-module.exports = {
+var config = {
   entry: "./app/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -24,3 +25,5 @@ module.exports = {
     })
   ]
 };
+
+module.exports = config;
