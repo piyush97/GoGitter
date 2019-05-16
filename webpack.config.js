@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 var config = {
   entry: "./app/index.js",
@@ -31,9 +32,11 @@ if (process.env.NODE_ENV === "production") {
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      },
+      optimization: {
+        minimizer: [new UglifyJsPlugin()]
       }
-    }),
-    new webpack.optimize.UglifyJsPlugin()
+    })
   );
 }
 
