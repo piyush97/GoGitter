@@ -20,10 +20,12 @@
   "keywords": [],
   "dependencies": {
     "axios": "^0.18.0",
+    "github-fork-ribbon-css": "^0.2.1",
     "prop-types": "^15.7.2",
     "query-string": "^6.5.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-github-fork-ribbon": "^0.6.0",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0"
   },

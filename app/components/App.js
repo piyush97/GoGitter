@@ -8,11 +8,13 @@ import Home from "./Home";
 import Nav from "./Nav";
 import Battle from "./Battle";
 import Results from "./Results";
+import ForkRibbon from "./ForkButton";
 
 export default class App extends React.Component {
   render() {
     return (
       <Router>
+        <ForkRibbon />
         <div className="container">
           <Nav />
           <Switch>
