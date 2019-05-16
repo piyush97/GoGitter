@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "NODE_ENV='production' webpack -p",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy",
+    "firebase-init": "firebase login && firebase init"
   },
   "author": "Piyush Mehta",
   "license": "MIT",
