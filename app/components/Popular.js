@@ -36,7 +36,7 @@ export default class Popular extends Component {
           onSelect={this.updateLanguage}
         />
         {!this.state.repos ? (
-          <Loading />
+          <Loading text="Downloading" speed={100} />
         ) : (
           <RepoGrid repos={this.state.repos} />
         )}
