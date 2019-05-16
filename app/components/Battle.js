@@ -112,16 +112,11 @@ export default class Battle extends React.Component {
           )}
 
           {playerOneImage !== null && (
-            <PlayerPreview
-              avatar={playerOneImage}
-              username={playerOneName}
-              onReset={this.handleReset}
-              id="playerOne"
-            >
+            <PlayerPreview avatar={playerOneImage} username={playerOneName}>
               {" "}
               <button
                 className="reset"
-                onClick={props.onReset.bind(null, props.id)}
+                onClick={this.handleReset(null, "playerOne")}
               >
                 Reset
               </button>
@@ -137,12 +132,14 @@ export default class Battle extends React.Component {
           )}
 
           {playerTwoImage !== null && (
-            <PlayerPreview
-              avatar={playerTwoImage}
-              username={playerTwoName}
-              onReset={this.handleReset}
-              id="playerTwo"
-            />
+            <PlayerPreview avatar={playerTwoImage} username={playerTwoName}>
+              <button
+                className="reset"
+                onClick={this.handleReset(null, "playerTwo")}
+              >
+                Reset
+              </button>
+            </PlayerPreview>
           )}
         </div>
 
