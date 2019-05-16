@@ -32,6 +32,7 @@ export default class App extends React.Component {
               }}
             />{" "}
           </Switch>
+          <div className="footer">Made with ❤️ by Piyush Mehta </div>
         </div>
       </Router>
     );
