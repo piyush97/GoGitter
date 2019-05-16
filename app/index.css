@@ -27,7 +27,7 @@ li {
   border: none;
   font-size: 16px;
   border-radius: 3px;
-  width: 200px;
+  width: 100px;
   text-align: center;
   display: block;
   padding: 7px 0;
@@ -38,10 +38,12 @@ li {
   background: linear-gradient(#1a1a1a, #0a0a0a);
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button:active {
   transform: translateY(1px);
+  cursor: pointer;
 }
 
 .avatar {
@@ -106,7 +108,6 @@ li {
 .column {
   display: flex;
   flex-direction: column;
-  width: 500px;
   align-items: center;
 }
 

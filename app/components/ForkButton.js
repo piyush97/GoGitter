@@ -4,7 +4,7 @@ import GitHubForkRibbon from "react-github-fork-ribbon";
 export default function ForkRibbon() {
   return (
     <GitHubForkRibbon
-      position="right"
+      position="right-bottom"
       color="red"
       href="https://github.com/piyush97/GoGitter"
       target="_blank"
