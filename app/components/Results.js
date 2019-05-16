@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+var React = require("react");
 
-export default class Results extends Component {
+class Results extends React.Component {
   render() {
-    return <div />;
+    return <div>Results!</div>;
   }
 }
+
+export default Results;

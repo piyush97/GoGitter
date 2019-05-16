@@ -7,6 +7,7 @@ var Switch = ReactRouter.Switch;
 import Home from "./Home";
 import Nav from "./Nav";
 import Battle from "./Battle";
+import Results from "./Results";
 
 export default class App extends React.Component {
   render() {
@@ -16,8 +17,9 @@ export default class App extends React.Component {
           <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/battle" component={Battle} />
+            <Route path="/battle/results" component={Results} />{" "}
             <Route path="/popular" component={Popular} />
-            <Route path="/battle" component={Battle} />
             <Route
               render={function() {
                 return (
