@@ -19,12 +19,6 @@ function PlayerPreview(props) {
   );
 }
 
-// PlayerPreview.propTypes = {
-//   avatar: PropTypes.string.isRequired,
-//   username: PropTypes.string.isRequired,
-//   onReset: PropTypes.function.isRequired
-// };
-
 class PlayerInput extends Component {
   constructor(props) {
     super(props);
@@ -83,6 +77,12 @@ PlayerInput.propTypes = {
 
 PlayerInput.defaultProps = {
   label: "Username"
+};
+
+PlayerPreview.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequired
 };
 
 export default class Battle extends React.Component {
