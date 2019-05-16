@@ -117,7 +117,15 @@ export default class Battle extends React.Component {
               username={playerOneName}
               onReset={this.handleReset}
               id="playerOne"
-            />
+            >
+              {" "}
+              <button
+                className="reset"
+                onClick={props.onReset.bind(null, props.id)}
+              >
+                Reset
+              </button>
+            </PlayerPreview>
           )}
 
           {!playerTwoName && (
