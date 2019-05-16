@@ -21,6 +21,17 @@ function getRepos(username) {
   );
 }
 
+function getStarCount(repos) {
+  return repos.data.reduce(function(count, repo) {
+    return count + repo.stargazers_count;
+  }, 0);
+}
+
+function calculateScore(profile, repos) {
+  var followers = profile.followers;
+  var totalStars = getStarCount();
+}
+
 export default {
   battle: players => {},
 
