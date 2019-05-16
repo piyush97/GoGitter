@@ -48,6 +48,9 @@ function getUserData(player) {
     };
   });
 }
+function sortPlayers(players) {
+  return players.sort(function(a, b) {});
+}
 
 export default {
   battle: players => {},
