@@ -74,7 +74,6 @@ export default class Battle extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleReset = this.handleReset.bind(this);
   }
   handleSubmit(id, username) {
     this.setState(function() {
@@ -113,10 +112,9 @@ export default class Battle extends React.Component {
 
           {playerOneImage !== null && (
             <PlayerPreview avatar={playerOneImage} username={playerOneName}>
-              {" "}
               <button
                 className="reset"
-                onClick={this.handleReset(null, "playerOne")}
+                onClick={this.handleReset.bind(this, "playerOne")}
               >
                 Reset
               </button>
@@ -135,7 +133,7 @@ export default class Battle extends React.Component {
             <PlayerPreview avatar={playerTwoImage} username={playerTwoName}>
               <button
                 className="reset"
-                onClick={this.handleReset(null, "playerTwo")}
+                onClick={this.handleReset.bind(this, "playerTwo")}
               >
                 Reset
               </button>
