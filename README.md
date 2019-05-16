@@ -1,6 +1,9 @@
 <h1 align="center"> GoGitter </h1>
 <h4 align="center"> Battle with your friends </h4>
 
+Star this repository if you like it
+⭐
+
 Screen:
 
 <img src="screen.gif">
