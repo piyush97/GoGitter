@@ -57,7 +57,12 @@ class Results extends React.Component {
       );
     }
 
-    return <div>{JSON.stringify(this.state)}</div>;
+    return (
+      <div className="row">
+        <Player label="Winner" score={winner.score} profile={winner.profile} />
+        <Player label="loser" score={loser.score} profile={loser.score} />
+      </div>
+    );
   }
 }
 
