@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import Link from "react-router-dom";
 function PlayerPreview(props) {
   return (
     <div>
@@ -157,6 +157,22 @@ export default class Battle extends React.Component {
             />
           )}
         </div>
+        {playerOneImage && playerTwoImage && (
+          <Link
+            className="button"
+            to={{
+              pathname: match.url + "/result",
+              search:
+                `?playerOneName=` +
+                playerOneName +
+                "&playerTwoName=" +
+                playerTwoName
+            }}
+          >
+            {" "}
+            Battle{" "}
+          </Link>
+        )}
       </div>
     );
   }
