@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --open"
   },
+  "author": "Piyush Mehta",
+  "license": "MIT",
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -13,8 +15,6 @@
     ]
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
     "prop-types": "^15.7.2",
