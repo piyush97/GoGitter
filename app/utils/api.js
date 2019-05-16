@@ -57,7 +57,7 @@ function sortPlayers(players) {
   });
 }
 
-module.exports = {
+export default {
   battle: function(players) {
     return axios
       .all(players.map(getUserData))
