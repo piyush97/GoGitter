@@ -1,0 +1,12 @@
+<h1 align="center"> GoGitter </h1>
+<h4 align="center"> Battle with your friends </h4>
+
+Screen:
+
+<img src="screen.gif">
+
+Tech:
+1. React
+2. AJAX
+3. Router
+4. Query String
