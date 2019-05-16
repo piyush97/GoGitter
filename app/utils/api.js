@@ -38,6 +38,17 @@ function handleError(error) {
   return null;
 }
 
+function getUserData(player) {
+  return axios.all([getProfile(player), getRepos(player)]).then(function(data) {
+    var profile = data[0];
+    var repos = data[1];
+    return {
+      profile: profile,
+      score: calculateScore(profile, repos)
+    };
+  });
+}
+
 export default {
   battle: players => {},
 
