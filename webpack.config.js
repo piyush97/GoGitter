@@ -26,7 +26,7 @@ var config = {
   ]
 };
 
-if ("we're building for Prod") {
+if (process.env.NODE_ENV) {
   config.plugins.push(
     new webpack.DefinePlugin({
       "process.env": {
