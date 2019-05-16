@@ -27,16 +27,22 @@ export default class Loading extends Component {
           });
         }
       }.bind(this),
-      300
+      this.props.speed
     );
   }
+  componentWillUnmount() {
+    window.clearInterval(this.interval);
+  }
+
   render() {
     return <p style={styles.content}>{this.state.text}</p>;
   }
 }
 Loading.propTypes = {
-  loading: PropTypes.string.isRequired
+  loading: PropTypes.string.isRequired,
+  speed: PropTypes.number.isRequired
 };
 Loading.defaultProps = {
-  text: "Loading"
+  text: "Loading",
+  speed: 300
 };
