@@ -153,7 +153,7 @@ export default class Battle extends React.Component {
               avatar={playerTwoImage}
               username={playerTwoName}
               onReset={this.handleReset}
-              id="playerOne"
+              id="playerTwo"
             />
           )}
         </div>
