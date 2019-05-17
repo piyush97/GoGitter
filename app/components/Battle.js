@@ -140,7 +140,6 @@ export default class Battle extends React.Component {
             </PlayerPreview>
           )}
         </div>
-
         {playerOneImage && playerTwoImage && (
           <Link
             className="button"

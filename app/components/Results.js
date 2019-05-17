@@ -73,18 +73,7 @@ class Results extends React.Component {
             };
           });
         }
-        if (players.playerOneName === players.playerTwoName) {
-          return this.setState(function() {
-            return {
-              error: (
-                <h1 style={{ textAlign: "center" }}>
-                  You're the king! Why compare with yourself?
-                </h1>
-              ),
-              loading: false
-            };
-          });
-        }
+
         this.setState(function() {
           return {
             error: null,
@@ -102,6 +91,7 @@ class Results extends React.Component {
     var winner = this.state.winner;
     var loser = this.state.loser;
     var loading = this.state.loading;
+    var players = queryString.parse(this.props.location.search);
 
     if (loading === true) {
       return <Loading text="Wait Madi❗" speed={200} />;
@@ -115,22 +105,33 @@ class Results extends React.Component {
         </div>
       );
     }
-
-    return (
-      <div>
+    if (players.playerOneName === players.playerTwoName) {
+      return (
         <div className="row">
           <Player
-            label="Winner"
+            label="We know the truth"
             score={winner.score}
             profile={winner.profile}
           />
-          <Player label="Loser" score={loser.score} profile={loser.profile} />
         </div>
-        <Link to="/battle">
-          <button className="button"> Again🔥</button>
-        </Link>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <div className="row">
+            <Player
+              label="Winner"
+              score={winner.score}
+              profile={winner.profile}
+            />
+            <Player label="Loser" score={loser.score} profile={loser.profile} />
+          </div>
+          <Link to="/battle">
+            <button className="button"> Again🔥</button>
+          </Link>
+        </div>
+      );
+    }
   }
 }
 
