@@ -73,7 +73,18 @@ class Results extends React.Component {
             };
           });
         }
-
+        if (players.playerOneName === players.playerTwoName) {
+          return this.setState(function() {
+            return {
+              error: (
+                <h1 style={{ textAlign: "center" }}>
+                  You're the king! Why compare with yourself?
+                </h1>
+              ),
+              loading: false
+            };
+          });
+        }
         this.setState(function() {
           return {
             error: null,
